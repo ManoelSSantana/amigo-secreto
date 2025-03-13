@@ -27,3 +27,17 @@ function atualizarListaAmigos() {
         lista.appendChild(li);
     });
 }
+
+//atualizar a lista de amigos
+function atualizarListaAmigos() {
+    const lista = document.getElementById("listaAmigos");
+    lista.innerHTML = ""; // Limpa a lista antes de atualizar
+
+    for (let i = 0; i < amigos.length; i++) {
+        const li = document.createElement("li");
+        li.textContent = amigos[i];
+        lista.appendChild(li);
+    }
+}
+
+
