@@ -41,3 +41,16 @@ function atualizarListaAmigos() {
 }
 
 
+//função para sortear um dos nomes
+function sortearAmigo() {
+    if (amigos.length === 0) {
+        alert("A lista de amigos está vazia. Adicione pelo menos um nome.");
+        return;
+    }
+
+    const indiceSorteado = Math.floor(Math.random() * amigos.length);
+    const amigoSorteado = amigos[indiceSorteado];
+
+    const resultado = document.getElementById("resultado");
+    resultado.innerHTML = `<li>O amigo sorteado é: <strong>${amigoSorteado}</strong></li>`;
+}
